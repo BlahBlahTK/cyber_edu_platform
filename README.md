@@ -44,11 +44,12 @@ An interactive cybersecurity education platform built with Python (Flask) and Ja
 
 1. **Start the Flask server:**
    ```bash
-   python app.py
+   flask run --port=8080
    ```
+   *Note: We use port 8080 because port 5000 is often reserved by macOS system services (AirPlay).*
 
 2. **Open your browser:**
-   Navigate to [http://localhost:5000](http://localhost:5000)
+   Navigate to [http://localhost:8080](http://localhost:8080)
 
 ## Project Structure
 
