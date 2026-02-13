@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="chat-container">
+    <div class="chat-header">
+        <h1>AI Security Assistant</h1>
+        <p>Describe a suspicious event, email, or log. I'll help you identify it.</p>
+    </div>
+
+    <div id="chat-history" class="chat-history">
+        <div class="message bot-message">
+            Hello! I'm your CyberGuard assistant. Describe what you're seeing (e.g., "I got an email asking for my
+            password urgently"), and I'll analyze it for you.
+        </div>
+    </div>
+
+    <div class="chat-input-area">
+        <textarea id="user-input" placeholder="Type your description here..."></textarea>
+        <button id="send-btn">Analyze</button>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
+{% endblock %}

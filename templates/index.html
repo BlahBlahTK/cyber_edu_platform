@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <h1>Common Cyber Attacks</h1>
+    <p>Understand the threats. Learn the defenses.</p>
+</section>
+
+<div class="attack-grid">
+    {% for id, attack in attacks.items() %}
+    <a href="{{ url_for('attack_detail', attack_id=id) }}" class="attack-card">
+        <h2>{{ attack.title }}</h2>
+        <p>{{ attack.description }}</p>
+        <span class="severity {{ attack.severity|lower }}">Severity: {{ attack.severity }}</span>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
